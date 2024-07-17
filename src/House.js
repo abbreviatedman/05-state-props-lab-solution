@@ -1,8 +1,8 @@
 function House(props) {
   return (
-    <div>
+    <li className="list-group-item">
       {props.house ? <p onClick={() => props.selectHouse(props.house)}>{props.house.FacilityName}</p> : <p>Select a house.</p>}
-    </div>
+    </li>
   );
 }
 

@@ -2,7 +2,7 @@ import House from "./House";
 
 function HouseList(props) {
   return (
-    <div>
+    <ul className="list-group">
       {props.houses.map((house) => (
         <House
           key={house.FacilityName}
@@ -10,7 +10,7 @@ function HouseList(props) {
           selectHouse={props.selectHouse}
         />
       ))}
-    </div>
+    </ul>
   );
 }
 
