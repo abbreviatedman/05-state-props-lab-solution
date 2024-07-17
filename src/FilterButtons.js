@@ -1,6 +1,6 @@
 function FilterButtons(props) {
   return (
-    <div className="btn-group">
+    <div className="btn-group" style={{margin: "0px 20px 20px 20px"}}>
       <button className="btn btn-outline-primary" onClick={() => props.filterHandler('Manhattan')}>Manhattan</button>
       <button className="btn btn-outline-primary" onClick={() => props.filterHandler('Bronx')}>Bronx</button>
       <button className="btn btn-outline-primary" onClick={() => props.filterHandler('Brooklyn')}>Brooklyn</button>
