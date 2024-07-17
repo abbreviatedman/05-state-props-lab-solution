@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import firehouses from "./firehouse.json";
+import houses from "./firehouse.json";
 import CurrentHouse from "./CurrentHouse"
 import HouseList from "./HouseList";
 
@@ -9,7 +9,6 @@ function App() {
     setHouse(house);
   }
 
-  const [houses, setHouses] = useState(firehouses);
   const [house, setHouse] = useState(null);
 
   return (
