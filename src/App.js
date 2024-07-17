@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import firehouses from "./firehouse.json";
+import CurrentHouse from "./CurrentHouse"
+import HouseList from "./HouseList";
 
 function App() {
+  function selectHouse(house) {
+    setHouse(house);
+  }
+
+  const [houses, setHouses] = useState(firehouses);
+  const [house, setHouse] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CurrentHouse house={house} selectHouse={selectHouse} />
+      <HouseList houses={houses} selectHouse={selectHouse} />
     </div>
   );
 }
