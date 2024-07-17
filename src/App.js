@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <CurrentHouse house={house} selectHouse={selectHouse} />
+      <CurrentHouse house={house} />
       <FilterButtons filterHandler={filterHouses} resetHandler={resetFilter}/>
       <HouseList houses={houses} selectHouse={selectHouse} />
     </div>
